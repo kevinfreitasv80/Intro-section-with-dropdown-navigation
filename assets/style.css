@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+    --color1: hsl(0, 0%, 98%);
+    --color2: hsl(0, 0%, 41%);
+    --color3: hsl(0, 0%, 8%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+body, button{
+    font-family: "Epilogue", sans-serif;
+}
+
+header, header nav, header section, main, main section:first-child article{
+    display: flex;
+    align-items: center;
+}
+header{
+    margin: 2em 2em 0 2em;
+}
+header nav{
+    width: 100%;
+    justify-content: space-between;
+}
+header button{
+    margin-left: 2em;
+    border: 2px solid var(--color2);
+    background: none;
+}
+header button:hover{
+    border: 2px solid var(--color3);
+    color: var(--color3);
+}
+
+button{
+    padding: 1em 2em;
+    border-radius: 1.1em;
+    cursor: pointer;
+}
+a, button, p{
+    text-decoration: none;
+    color: var(--color2);
+}
+a+svg, header nav section a:nth-child(3){
+    margin-right: 3em;
+}
+a:hover, a:hover+svg path{
+    color: var(--color3);
+    stroke: var(--color3);
+}
+svg{
+    transition: .4s;
+}
+.logo{
+    margin-right: 3em;
+}
+main{
+    margin-top: 2em;
+    justify-content: space-evenly;
+}
+main section:last-child img{
+    width: 423px;
+    height: 563px;
+}
+main button{
+    border: none;
+    background: var(--color3);
+    color: var(--color1);
+    margin: 53px 0 5em;
+    font-weight: 700;
+    font-size: 1em;
+}
+main button:hover{
+    border: none;
+    outline: 1px solid var(--color3);
+    background: none;
+    color: var(--color3);
+}
+p{
+    max-width: 23.5em;
+    line-height: 25px;
+}
+h1{
+    font-size: 80px;
+}
+.support{
+    justify-content: space-around;
+}
+
+.rela{
+    position: relative;
+}
+
+div[class^="floating"]{
+    padding: 1.5em;
+    position: absolute;
+    background: white;
+    border-radius: .5em;
+    box-shadow: 0 0 9px 9px rgba(0, 0, 0, .1);
+    display: none;
+}
+div[class$="1"]{
+    top: 190%;
+    left: -55%;
+}
+div[class$="2"]{
+    top: 190%;
+    left: -10%;
+}
+div[class$="2"] p{
+    margin: 0;
+}
+div[class$="1"] article{
+    display: flex;
+    align-items: center;
+}
+div[class$="1"] article p{
+    margin: 0 0 5px 3px;
+}
+div[class$="1"] article img{
+    margin: 0 5px 5px 0;
+}
+a, button{
+    transition: .4s;
+}
+.menus, .menus img{
+    position: absolute;
+}
+.menus{
+    top: 2em;
+    right: 5em;
+    z-index: 4;
+}
+.menus img:last-child{
+    top: -3.5px;
+    left: 2.5px;
+}
+#closeMenu, #menu{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    h1{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .blackDiv{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: .4;
+        z-index: 2;
+        background: black;
+        display: none;
+    }
+    div[class^="floating"]{
+        padding: 1.5em;
+        position: static;
+        box-shadow: 0 0 0 transparent;
+    }
+    #menu{
+        display: block;
+    }
+    a+svg, header nav section a:nth-child(3), header button{
+        margin: 0;
+    }
+    header nav{
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0%;
+        width: 242px;
+        background: white;
+        z-index: 3;
+    }
+    header nav{
+        display: none;
+    }
+    .support{
+        margin-bottom: 2em;
+    }
+    header nav section{
+        display: grid;
+    }
+    header nav section:first-child{
+        margin-top: 5em;
+        margin-left: 1.5em;
+        display: grid;
+    }
+    .rela, .careers{
+        padding-bottom: 1em;
+    }
+    header nav section:last-child{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px;
+    }
+    header nav section:last-child button{
+        width: 197px;
+    }
+    header nav section:last-child a{
+        margin-bottom: 20px;
+    }
+    main{
+        flex-direction: column;
+        text-align: center;
+    }
+    main h1{
+        margin-bottom: .3em;
+    }
+    main button{
+        margin: 2em auto;    
+    }
+    main p{
+        margin: auto;
+    }
+    main section:last-child{
+        order: -1;
+    }
+    main section:last-child img{
+        width: 95%;
+    }
+    main section:first-child br{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    main section:last-child img{
+        width: 606px;
+        height: 478px;
+    }
+}
+@media screen and (max-width: 622px) {
+    main section:last-child img{
+        width: 500px;
+        height: 408px;
+    }
+    main h1{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 530px) {
+    main section:last-child img{
+        width: 400px;
+        height: 308px;
+    }
+    main h1{
+        font-size: 40px;
+    }
+    .support{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 420px) {
+    main section:last-child img{
+        width: 372px;
+        height: 278px;
+    }
+    main h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 380px) {
+    main section:last-child img{
+        width: 370px;
+        height: 291px;
+    }
+    main h1{
+        font-size: 30px;
+    }
+    main p{
+        max-width: 20.9em;
+    }
+}
+@media screen and (max-width: 375px) {
+    main section:last-child img{
+        width: 342px;
+        height: 278px;
+    }
+    main h1{
+        font-size: 27px;
+    }
+    .support img{
+        width: 20%;
+    }
+}
